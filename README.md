@@ -90,7 +90,7 @@ Explore tons of playlists and listen to music while meeting new people!a
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://user-images.githubusercontent.com/77759231/140560728-835b80f7-e1f7-4255-a3ed-6ed01495aa31.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
