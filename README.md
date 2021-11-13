@@ -113,16 +113,17 @@ Explore tons of playlists and listen to music while meeting new people!a
 - Home Feed Screen
   - (Read/GET) Query all posts where user is author
     ```java
-	let query = PFQuery(className:"Post")
-	query.whereKey("author", equalTo: currentUser)
-	query.order(byDescending: "createdAt")
-	query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-	   if let error = error { 
-	      print(error.localizedDescription)
-	   } else if let posts = posts {
-	  // TODO: Do something with posts...
+	ParseQuery<ParseUser> query = ParseUser.getQuery();
+	query.whereGreaterThan("age", 20); // find adults
+	query.findInBackground(new FindCallback<ParseUser>() {
+	 public void done(List<ParseUser> objects, ParseException e) {
+	   if (e == null) {
+	      // The query was successful.
+	    } else {
+	      // Something went wrong.
            }
 	}
+      });
      ```
   - (Create/POST) Create a new like on a post
   - (Delete) Delete existing like
