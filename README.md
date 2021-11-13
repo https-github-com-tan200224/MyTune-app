@@ -112,6 +112,19 @@ Explore tons of playlists and listen to music while meeting new people!a
 ### Networking
 - Home Feed Screen
   - (Read/GET) Query all posts where user is author
+       ```java
+              let query = PFQuery(className:"Post")
+              query.whereKey("author", equalTo: currentUser)
+              query.order(byDescending: "createdAt")
+              query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+                 if let error = error { 
+                  print(error.localizedDescription)
+                 } else if let posts = posts {
+                   print("Successfully retrieved \(posts.count) posts.")
+                 // TODO: Do something with posts...
+                  }
+               }
+          ```          
   - (Create/POST) Create a new like on a post
   - (Delete) Delete existing like
   - (Create/POST) Create a new comment on a post
