@@ -133,7 +133,7 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 -Create Post Screen
   -(Create/POST) Create a new post object
 -Profile Screen
-  -(Read/GET) Query logged in user object
-  -(Update/PUT) Update user profile image
+ -(Read/GET) Query logged in user object
+ -(Update/PUT) Update user profile image
 
 
