@@ -100,6 +100,15 @@ Explore tons of playlists and listen to music while meeting new people!a
 [This section will be completed in Unit 9]
 ### Models
 [Add table of models]
+|    Property     |      Type       |                       Description                   |
+|     :---        |     :---:       |                         ---:                        |
+|     author      | Pointer to User |                     Image Author                    |                 
+|     audio       |      File       |                  Audio that user posts              |
+|    caption      |     String      |        Caption that author posts with the audio     |
+|  CommentsCount  |     Number      | number of comments that has been posted to a post   |
+|   likesCount    |     Number      |          Number of likes that a post got            |
+|   CreatedAt     |    DateTime     |       Date when the post was created (default)      |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
