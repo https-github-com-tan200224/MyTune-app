@@ -101,7 +101,7 @@ Explore tons of playlists and listen to music while meeting new people!a
 ### Models
 [Add table of models]
 |    Property     |      Type       |                       Description                   |
-|     :---        |     :---:       |                         ---:                        |
+|     :---        |     :---:       |                         :---                        |
 |     author      | Pointer to User |                     Image Author                    |                 
 |     audio       |      File       |                  Audio that user posts              |
 |    caption      |     String      |        Caption that author posts with the audio     |
