@@ -116,7 +116,7 @@ Explore tons of playlists and listen to music while meeting new people!a
   - (Delete) Delete existing like
   - (Create/POST) Create a new comment on a post
   - (Delete) Delete existing comment
--Create Post Screen
+- Create Post Screen
   -(Create/POST) Create a new post object
 -Profile Screen
   -(Read/GET) Query logged in user object
