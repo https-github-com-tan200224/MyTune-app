@@ -32,12 +32,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //get the data
         queryPosts();
     }
 
 
 
     private void queryPosts() {
+
+        //create a container that store the data from Post
         ParseQuery <Post> query = ParseQuery.getQuery(Post.class);
         query.findInBackground(new FindCallback<Post>() {
             @Override

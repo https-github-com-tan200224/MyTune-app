@@ -11,6 +11,7 @@ public class ParseApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        //Must Register before you access to the data
         ParseObject.registerSubclass(Post.class);
 
         Parse.initialize(new Parse.Configuration.Builder(this)
