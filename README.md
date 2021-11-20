@@ -26,14 +26,14 @@ Explore tons of playlists and listen to music while meeting new people!a
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-[] Fill in your required user stories here
-[] User can register a new account 
-[x] User can login
-[] User profile that shows his username, favoriate songs, and general information about the user.
-[] User can upload his own music in a post
-[] User can listen to other people songs
-[] User can like/comment on other people shared songs
-[] User can create/save have his own playlists
+* [] Fill in your required user stories here
+* [] User can register a new account 
+* [x] User can login
+* [] User profile that shows his username, favoriate songs, and general information about the user.
+* [] User can upload his own music in a post
+* [] User can listen to other people songs
+* [] User can like/comment on other people shared songs
+* [] User can create/save have his own playlists
 
 **Optional Nice-to-have Stories**
 
