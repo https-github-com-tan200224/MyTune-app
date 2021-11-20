@@ -26,8 +26,7 @@ Explore tons of playlists and listen to music while meeting new people!a
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-
-[] [fill in your required user stories here]
+[] fill in your required user stories here]
 [] User can register a new account 
 [x] User can login
 [] User profile that shows his username, favoriate songs, and general information about the user.
