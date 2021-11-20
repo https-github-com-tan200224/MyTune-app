@@ -135,3 +135,7 @@ Explore tons of playlists and listen to music while meeting new people!a
   - (Update/PUT) Update user profile image
   - (Create/POST) Create a new favorite on a post
   - (Update/PUT) Update user favorite post list
+
+### Video Walkthrough
+Here is a walkthrough of the login page
+<img src='Walkthrough-MyTune.gif' title='Flixter Walkthrough' width='' alt='MyTune Walkthrough' />
