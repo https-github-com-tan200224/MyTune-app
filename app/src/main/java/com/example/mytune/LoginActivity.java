@@ -1,16 +1,21 @@
 package com.example.mytune;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import com.example.mytune.MainActivity;
+import com.example.mytune.R;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -18,9 +23,13 @@ import com.parse.ParseUser;
 public class LoginActivity extends AppCompatActivity {
 
     public static final String TAG = "LoginActivity";
+    private ImageView imageView;
     private EditText etUsername;
     private EditText etPassword;
-    private Button btnLogin;
+    private CardView btnLogin;
+    private CardView btnSignUp;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +40,12 @@ public class LoginActivity extends AppCompatActivity {
             goMainActivity();
         }
 
+        imageView = findViewById(R.id.imageView);
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        btnSignUp = findViewById(R.id.btnSignUp);
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +55,18 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser(username, password);
             }
         });
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSignUpActivity();
+            }
+        });
+
+    }
+    private void goSignUpActivity() {
+        Intent i = new Intent(this, SignUp.class);
+        startActivity(i);
+        finish();
     }
 
     private void loginUser(String username, String password) {
