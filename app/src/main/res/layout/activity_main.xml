@@ -10,17 +10,19 @@
     tools:context=".MainActivity">
 
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fgContainer"
-        android:name="com.bumptech.glide.manager.SupportRequestManagerFragment"
-        android:layout_width="378dp"
-        android:layout_height="629dp" />
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/fgContainer"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="4dp" />
+        app:menu="@menu/menu_bottom_navigation" />
+
+
 </RelativeLayout>
