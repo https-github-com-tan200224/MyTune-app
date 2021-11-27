@@ -139,4 +139,4 @@ Explore tons of playlists and listen to music while meeting new people!a
 ### Video Walkthrough
 Here is a walkthrough of the login page
 
-<img src='Walkthrough-MyTune.gif' title='Flixter Walkthrough' width='' alt='MyTune Walkthrough' />
+<img src='MyTune2walkthrough.gif' title='Flixter Walkthrough' width='' alt='MyTune Walkthrough' />
