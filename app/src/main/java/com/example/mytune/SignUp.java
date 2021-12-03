@@ -20,6 +20,11 @@ public class SignUp extends AppCompatActivity {
     public static final String TAG = "SignUp";
     private EditText etUsername;
     private EditText etPassword;
+    private EditText etGender;
+    private EditText etemail;
+    private EditText etDateOfBirth;
+
+
 
     private CardView btnSave;
 
@@ -30,6 +35,9 @@ public class SignUp extends AppCompatActivity {
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
+        etGender = findViewById(R.id.etGender);
+        etemail = findViewById(R.id.etemail);
+        etDateOfBirth = findViewById(R.id.etDateOfBirth);
 
         btnSave=findViewById (R.id.btnSave);
         btnSave.setOnClickListener ( new View.OnClickListener ( ) {
