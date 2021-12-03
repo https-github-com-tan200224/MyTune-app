@@ -2,7 +2,9 @@ package com.example.mytune;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -30,30 +32,33 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final FragmentManager fragmentManager = getSupportFragmentManager();
         setContentView(R.layout.activity_main);
-
-        //get the data
-        queryPosts();
-    }
-
-
-
-    private void queryPosts() {
-
-        //create a container that store the data from Post
-        ParseQuery <Post> query = ParseQuery.getQuery(Post.class);
-        query.findInBackground(new FindCallback<Post>() {
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
-            public void done(List<Post> posts, ParseException e) {
-                if (e != null) {
-                    Log.e(TAG, "Issue with Getting Posts", e);
-                    return;
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                Fragment fragment = new PostsFragment();
+                switch (item.getItemId()) {
+                    case R.id.action_home:
+                        fragment = new PostsFragment();
+                        break;
+                    case R.id.action_posts:
+                        //fragment = ComposeFragment;
+                        break;
+                    case R.id.action_compose:
+                    default:
+                        //fragment = ProfileFragment;
+                        break;
                 }
-                for (Post post: posts) {
-                    Log.i(TAG, "Post" + post.getDescription());
-                }
-
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
             }
         });
+        //get the data
+        //queryPosts();
     }
-}
+
+
+
+
+    }

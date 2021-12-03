@@ -1,4 +1,6 @@
 package com.example.mytune.fragments;
 
-public class ComposeFragment {
+import androidx.fragment.app.Fragment;
+
+public class ComposeFragment extends Fragment {
 }
