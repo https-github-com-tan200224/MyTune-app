@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".SignUp">
+    tools:context=".SignUp"
+    android:background="@drawable/gradient_background">
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
+        android:layout_marginBottom="506dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName" />
@@ -24,18 +26,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="491dp"
+        android:layout_marginBottom="430dp"
         android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Password" />
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/etGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="397dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="348dp"
         android:ems="10"
         android:hint="Gender" />
 
@@ -45,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="212dp"
+        android:layout_marginBottom="182dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress" />
@@ -56,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="303dp"
+        android:layout_marginBottom="267dp"
         android:ems="10"
         android:hint="DateofBirth"
         android:inputType="date" />

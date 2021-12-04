@@ -43,7 +43,7 @@ public class ProfileFragment extends Fragment{
     private ParseUser user; // the current user
     private List<Post> allPosts; // posts shown in the recycler view
     private File videoFile; // file for the user's uploaded profile picture
-    private FragmentProfileBinding binding; // to bind avtivity with layout
+    private FragmentProfileBinding binding; // to bind activity with layout
 
 //I used data binding instead
 
