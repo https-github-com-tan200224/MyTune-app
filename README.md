@@ -142,5 +142,5 @@ Here is a walkthrough of the login page
 <img src='MyTune2walkthrough.gif' title='Flixter Walkthrough' width='' alt='MyTune Walkthrough' />
 
 
-The user is asked to enter his email, gender and date of birth when signing up which are displayed in the profile Fragment.
+The user is asked to enter his/her email, gender and date of birth when signing up which are later on displayed in the profile Fragment.
 <img src="WalkthroughOfProfile.gif" width=350>
