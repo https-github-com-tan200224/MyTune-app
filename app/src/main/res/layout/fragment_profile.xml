@@ -5,9 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ProfileFragment">
+    tools:context=".fragments.ProfileFragment"
+    android:background="@drawable/gradient_background">
 
-    <com.google.android.material.appbar.AppBarLayout
+<com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,9 +19,16 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
             app:titleTextColor="@color/black"
             app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" @"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -29,7 +37,7 @@
                 android:text="User_name"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -248,8 +256,8 @@
                     android:layout_marginHorizontal="10dp"
                     android:text="Favorite Songs"
                     android:textAllCaps="false"
-                    android:backgroundTint="@color/white"
-                    android:textColor="@color/black" />
+                    android:backgroundTint="@color/red_plum"
+                    android:textColor="@color/white" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -259,8 +267,8 @@
                     android:layout_marginHorizontal="10dp"
                     android:text="Edit Bio"
                     android:textAllCaps="false"
-                    android:backgroundTint="@color/white"
-                    android:textColor="@color/black" />
+                    android:backgroundTint="@color/red_plum"
+                    android:textColor="@color/white" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -270,8 +278,8 @@
                     android:id="@+id/btnLogout"
                     android:text="Log Out"
                     android:textAllCaps="false"
-                    android:backgroundTint="@color/white"
-                    android:textColor="@color/black" />
+                    android:backgroundTint="@color/red_plum"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
