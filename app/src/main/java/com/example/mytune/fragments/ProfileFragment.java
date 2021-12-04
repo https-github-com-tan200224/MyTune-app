@@ -43,9 +43,10 @@ public class ProfileFragment extends Fragment{
     private ParseUser user; // the current user
     private List<Post> allPosts; // posts shown in the recycler view
     private File videoFile; // file for the user's uploaded profile picture
-    private FragmentProfileBinding binding;
+    private FragmentProfileBinding binding; // to bind avtivity with layout
 
-// I used binding instead
+//I used data binding instead
+
 //    private TextView tvName;
 //    private TextView tvDOB;
 //    private TextView tvGender;
@@ -71,35 +72,32 @@ public class ProfileFragment extends Fragment{
         super.onViewCreated(view, savedInstanceState);
         user = ParseUser.getCurrentUser();
 
-
         // User information
-        ParseFile photo = user.getParseFile("photo");
-        if (photo != null) {
-            Glide.with(this).load(photo.getUrl()).into(binding.ivProfilePhoto);
+        ParseFile userPhoto = user.getParseFile("profilePhoto");
+        if (userPhoto != null) {    // if 'profilePhoto' is not empty, then display that picture from parse
+            Glide.with(this).load(userPhoto.getUrl()).into(binding.ivProfilePhoto);
         }
-        binding.tvUsernameToolbar.setText(user.getUsername());
-        binding.tvName.setText(user.getString("name"));
+        // default profile picture if there is no picture in parse
+        binding.ivProfilePhoto.setImageResource(R.drawable.ic_baseline_person_24);
 
-        binding.tvDOB.setText(user.getString("dateOfBirth"));
-        binding.tvGender.setText(user.getString("gender"));
-        binding.tvEmail.setText(user.getEmail());
-        binding.tvBio.setText(user.getString("bio"));
+        binding.tvUsernameToolbar.setText(user.getUsername());      // get the @username
+        binding.tvName.setText(user.getString("name"));         // get the name of the user
+        binding.tvDOB.setText(user.getString("dateOfBirth"));   // date of birth for the user
+        binding.tvGender.setText(user.getString("gender"));     // get user gender
+        binding.tvEmail.setText(user.getEmail());                    // get user email
+        if (binding.tvBio != null) {
+            binding.tvBio.setText(user.getString("bio"));            // get user bio from parse
+        }
+        binding.tvBio.setText("No Bio Yet!");   // default bio if there is no bio added in parse
 
         binding.tvPostCount.setText(String.format(Locale.US, "%d", user.getInt("postCount")));
         binding.tvFollowerCount.setText(String.format(Locale.US, "%d", user.getInt("followerCount")));
         binding.tvFollowingCount.setText(String.format(Locale.US, "%d", user.getInt("followingCount")));
         binding.btnLogout.setOnClickListener(this::logoutOnClick);   // needs to create 2 methods for logout and editbio later
-//        binding.btnEditBio.setOnClickListener(this::editBioOnClick);
-//
-//         Setup refresh listener which triggers new data loading
-//        binding.swipeContainer.setOnRefreshListener(() -> {
-//            allPosts.clear();
-//            queryPosts(0);
-//            binding.swipeContainer.setRefreshing(false);
-//        });
-        binding.swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright);
+        binding.btnEditBio.setOnClickListener(this::editBioOnClick);
+    }
 
-//        return;
+    private void editBioOnClick(View view) {
     }
 
     /* When the user clicks log out button, log out and return to the login page. */
