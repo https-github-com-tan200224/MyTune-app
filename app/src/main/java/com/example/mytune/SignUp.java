@@ -46,15 +46,21 @@ public class SignUp extends AppCompatActivity {
                 Log.i(TAG, "onClick sign up button");
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-                signUser(username, password);
+                String email = etemail.getText().toString();
+                String gender = etGender.getText().toString();
+                String dateOfBirth = etDateOfBirth.getText().toString();
+                signUser(username, password, email, gender, dateOfBirth);
             }
         } );
     }
 
-    private void signUser(String username, String password) {
+    private void signUser(String username, String password, String email, String gender, String dateOfBirth) {
         ParseUser user = new ParseUser();
         user.setUsername(username);
         user.setPassword(password);
+        user.setEmail(email);   // Set the email in parse
+        user.put("gender", gender); // Set the gender in parse
+        user.put("dateOfBirth", dateOfBirth); // Set the dateOfBirth in parse
 
         user.signUpInBackground ( new SignUpCallback ( ) {
             @Override

@@ -80,9 +80,9 @@ public class ProfileFragment extends Fragment{
         binding.tvUsernameToolbar.setText(user.getUsername());
         binding.tvName.setText(user.getString("name"));
 
-        binding.tvDOB.setText(user.getString("DOB"));
-        binding.tvGender.setText(user.getString("Gender"));
-        binding.tvEmail.setText(user.getString("Email"));
+        binding.tvDOB.setText(user.getString("dateOfBirth"));
+        binding.tvGender.setText(user.getString("gender"));
+        binding.tvEmail.setText(user.getEmail());
         binding.tvBio.setText(user.getString("bio"));
 
         binding.tvPostCount.setText(String.format(Locale.US, "%d", user.getInt("postCount")));
