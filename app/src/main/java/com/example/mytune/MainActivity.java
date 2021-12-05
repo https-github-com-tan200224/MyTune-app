@@ -14,6 +14,7 @@ import com.example.mytune.fragments.ComposeFragment;
 import com.example.mytune.fragments.PostsFragment;
 import com.example.mytune.fragments.ProfileFragment;
 
+import com.example.mytune.fragments.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -49,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.action_compose:
 //                    Toast.makeText(MainActivity.this, "Compose!", Toast.LENGTH_SHORT).show();
                     fragment = new ComposeFragment();
+                    break;
+                case R.id.action_search:
+//                    Toast.makeText(MainActivity.this, "Compose!", Toast.LENGTH_SHORT).show();
+                    fragment = new SearchFragment();
                     break;
                 case R.id.action_profile:
 //                    Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
