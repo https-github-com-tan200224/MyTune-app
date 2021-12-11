@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.mytune.LoginActivity;
 import com.example.mytune.Post;
+import com.example.mytune.PostsAdapter;
 import com.example.mytune.R;
 import com.example.mytune.databinding.FragmentProfileBinding;
 import com.parse.FindCallback;
@@ -44,6 +45,8 @@ public class ProfileFragment extends Fragment{
     private List<Post> allPosts; // posts shown in the recycler view
     private File videoFile; // file for the user's uploaded profile picture
     private FragmentProfileBinding binding; // to bind activity with layout
+    private PostsAdapter adapter; // adapter for the posts' recycler view
+
 
 //I used data binding instead
 
@@ -72,13 +75,22 @@ public class ProfileFragment extends Fragment{
         super.onViewCreated(view, savedInstanceState);
         user = ParseUser.getCurrentUser();
 
+        // Set up adapter and layout of recycler view
+        allPosts = new ArrayList<>();
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 3);
+        adapter = new PostsAdapter(getContext(), allPosts);
+        binding.rvPosts.setLayoutManager(layoutManager);
+        binding.rvPosts.setAdapter(adapter);
+        queryPosts();
+
+
         // User information
         ParseFile userPhoto = user.getParseFile("profilePhoto");
         if (userPhoto != null) {    // if 'profilePhoto' is not empty, then display that picture from parse
             Glide.with(this).load(userPhoto.getUrl()).into(binding.ivProfilePhoto);
         }
         // default profile picture if there is no picture in parse
-        binding.ivProfilePhoto.setImageResource(R.drawable.ic_baseline_person_24);
+//        binding.ivProfilePhoto.setImageResource(R.drawable.ic_baseline_person_24);
 
         binding.tvUsernameToolbar.setText(user.getUsername());      // get the @username
         binding.tvName.setText(user.getString("name"));         // get the name of the user
@@ -88,17 +100,26 @@ public class ProfileFragment extends Fragment{
         if (binding.tvBio != null) {
             binding.tvBio.setText(user.getString("bio"));            // get user bio from parse
         }
-        binding.tvBio.setText("No Bio Yet!");   // default bio if there is no bio added in parse
+//        binding.tvBio.setText("No Bio Yet!");   // default bio if there is no bio added in parse
 
         binding.tvPostCount.setText(String.format(Locale.US, "%d", user.getInt("postCount")));
         binding.tvFollowerCount.setText(String.format(Locale.US, "%d", user.getInt("followerCount")));
         binding.tvFollowingCount.setText(String.format(Locale.US, "%d", user.getInt("followingCount")));
         binding.btnLogout.setOnClickListener(this::logoutOnClick);   // needs to create 2 methods for logout and editbio later
         binding.btnEditBio.setOnClickListener(this::editBioOnClick);
+
+        // Refresh listener
+        binding.swipeContainer.setOnRefreshListener(() -> {
+            allPosts.clear();
+            queryPosts();
+            binding.swipeContainer.setRefreshing(false);
+        });
+        binding.swipeContainer.setColorSchemeResources(android.R.color.holo_red_light);
     }
 
     private void editBioOnClick(View view) {
     }
+
 
     /* When the user clicks log out button, log out and return to the login page. */
     public void logoutOnClick(View v) {
@@ -108,5 +129,26 @@ public class ProfileFragment extends Fragment{
         getActivity().finish();
     }
 
+    private void queryPosts() {
 
+        //create a container that store the data from Post
+        ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+        query.include(Post.KEY_USER);
+        query.whereEqualTo(Post.KEY_USER, ParseUser.getCurrentUser());
+        query.findInBackground(new FindCallback<Post>() {
+            @Override
+            public void done(List<Post> posts, ParseException e) {
+                if (e != null) {
+                    Log.e(TAG, "Issue with Getting Posts", e);
+                    return;
+                }
+                for (Post post : posts) {
+                    Log.i(TAG, "Post " + post.getDescription() + ", username: " + post.getUser().getString("username"));
+                }
+                allPosts.addAll(posts);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+    }
 }
