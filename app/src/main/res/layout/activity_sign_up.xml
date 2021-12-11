@@ -9,16 +9,30 @@
     android:background="@drawable/gradient_background">
 
     <EditText
+        android:id="@+id/etname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="530dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <EditText
         android:id="@+id/etUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
-        android:layout_marginBottom="506dp"
+        android:layout_marginBottom="450dp"
         android:ems="10"
         android:hint="Username"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -26,10 +40,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="430dp"
+        android:layout_marginBottom="380dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etGender"
@@ -37,9 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="348dp"
+        android:layout_marginBottom="300dp"
         android:ems="10"
-        android:hint="Gender" />
+        android:hint="Gender"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etemail"
@@ -47,10 +63,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="182dp"
+        android:layout_marginBottom="220dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etDateOfBirth"
@@ -58,10 +75,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="267dp"
+        android:layout_marginBottom="150dp"
         android:ems="10"
         android:hint="DateofBirth"
-        android:inputType="date" />
+        android:inputType="date"
+        android:minHeight="48dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btnSave"

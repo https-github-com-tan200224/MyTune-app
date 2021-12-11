@@ -23,6 +23,7 @@ public class SignUp extends AppCompatActivity {
     private EditText etGender;
     private EditText etemail;
     private EditText etDateOfBirth;
+    private EditText etname;
 
 
 
@@ -38,6 +39,7 @@ public class SignUp extends AppCompatActivity {
         etGender = findViewById(R.id.etGender);
         etemail = findViewById(R.id.etemail);
         etDateOfBirth = findViewById(R.id.etDateOfBirth);
+        etname = findViewById(R.id.etname);
 
         btnSave=findViewById (R.id.btnSave);
         btnSave.setOnClickListener ( new View.OnClickListener ( ) {
@@ -49,18 +51,20 @@ public class SignUp extends AppCompatActivity {
                 String email = etemail.getText().toString();
                 String gender = etGender.getText().toString();
                 String dateOfBirth = etDateOfBirth.getText().toString();
-                signUser(username, password, email, gender, dateOfBirth);
+                String name = etname.getText().toString();
+                signUser(username, password, email, gender, dateOfBirth, name);
             }
         } );
     }
 
-    private void signUser(String username, String password, String email, String gender, String dateOfBirth) {
+    private void signUser(String username, String password, String email, String gender, String dateOfBirth, String name) {
         ParseUser user = new ParseUser();
         user.setUsername(username);
         user.setPassword(password);
         user.setEmail(email);   // Set the email in parse
         user.put("gender", gender); // Set the gender in parse
         user.put("dateOfBirth", dateOfBirth); // Set the dateOfBirth in parse
+        user.put("name", name);
 
         user.signUpInBackground ( new SignUpCallback ( ) {
             @Override
