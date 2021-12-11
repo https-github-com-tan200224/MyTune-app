@@ -27,11 +27,11 @@ Explore tons of playlists and listen to music while meeting new people!a
 
 **Required Must-have Stories**
 * [] Fill in your required user stories here
-* [] User can register a new account 
+* [x] User can register a new account 
 * [x] User can login
-* [] User profile that shows his username, favoriate songs, and general information about the user.
-* [] User can upload his own music in a post
-* [] User can listen to other people songs
+* [x] User profile that shows his username, favoriate songs, and general information about the user.
+* [x] User can upload his own music in a post
+* [x] User can listen to other people songs
 * [] User can like/comment on other people shared songs
 * [] User can create/save have his own playlists
 
@@ -82,10 +82,9 @@ Explore tons of playlists and listen to music while meeting new people!a
 **Flow Navigation** (Screen to Screen)
 
 * [Posts]
-
-   * ...
 * [Pofile]
-
+* [Search]
+* [Record]
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
