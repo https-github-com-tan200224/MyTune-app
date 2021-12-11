@@ -88,12 +88,6 @@ Explore tons of playlists and listen to music while meeting new people!a
 
 <img src="https://user-images.githubusercontent.com/77759231/140560728-835b80f7-e1f7-4255-a3ed-6ed01495aa31.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
-## Schema 
-
 ### Models
 
 |    Property     |      Type       |                       Description                   |
