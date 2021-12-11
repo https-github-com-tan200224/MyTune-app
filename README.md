@@ -13,7 +13,7 @@ All you have to do is listen and engage with what you like, skip what you don't,
 Explore tons of playlists and listen to music while meeting new people!a
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
+
 - **Category:** social media
 - **Mobile:** Anyone is free to share their singing, talks about some knowlege of musics. It is view and uses camera.
 - **Story:**
@@ -26,7 +26,7 @@ Explore tons of playlists and listen to music while meeting new people!a
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* [] Fill in your required user stories here
+
 * [x] User can register a new account 
 * [x] User can login
 * [x] User profile that shows his username, favoriate songs, and general information about the user.
@@ -37,11 +37,10 @@ Explore tons of playlists and listen to music while meeting new people!a
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
 * User can set a sleep timer
 * User can switch btween night/day mode
 * User can see the history of all songs he liked
-* ...
+* User can have a chat feature
 
 ### 2. Screen Archetypes
 
