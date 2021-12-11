@@ -35,7 +35,6 @@
         android:id="@+id/tvDescription"
         android:layout_width="396dp"
         android:layout_height="57dp"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
