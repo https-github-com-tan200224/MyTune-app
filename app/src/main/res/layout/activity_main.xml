@@ -24,6 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/ic_launcher_background"
+        app:itemIconTint="@drawable/tab_color"
+        app:itemTextColor="@drawable/tab_color"
         app:menu="@menu/menu_bottom_navigation" />
 
 
