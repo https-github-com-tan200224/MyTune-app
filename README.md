@@ -85,7 +85,7 @@ Explore tons of playlists and listen to music while meeting new people!a
 * [Record]
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
+
 <img src="https://user-images.githubusercontent.com/77759231/140560728-835b80f7-e1f7-4255-a3ed-6ed01495aa31.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
@@ -93,9 +93,9 @@ Explore tons of playlists and listen to music while meeting new people!a
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
 |    Property     |      Type       |                       Description                   |
 |     :---:       |     :---:       |                         :---:                       |
 |     author      | Pointer to User |                     Image Author                    |                 
