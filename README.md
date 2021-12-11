@@ -47,7 +47,7 @@ Explore tons of playlists and listen to music while meeting new people!a
 * [Login]
    * [Create login page]
    * [Create a register account page]
-   * ...
+
 * [Profile]
    * [Recorded music]
    * [Liked posts]
@@ -60,8 +60,7 @@ Explore tons of playlists and listen to music while meeting new people!a
    * [favorite songs]
    * [watched history]
    * [Your posts]
-   * ...
-   * ...
+
 * [Posts]
    * [Posts of other users]
    * [Save playlist from the other users]
